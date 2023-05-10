@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "My Chrome Config",
+    "author": "Megaheart",
+    "version": "0.0.1",
+    "description": "Made by Megaheart",
+    "permissions":["tabs"],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "my_chrome_config@megaheart.com"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.facebook.com/*"],
+        "css": ["facebook.css"],
+        "js": ["facebook.js"]
+      },
+      {
+        "matches": [
+          "https://ctt-sis.hust.edu.vn/Students/TimetablesTemp.aspx", 
+          "http://ctt-sis.hust.edu.vn/Students/TimetablesTemp.aspx"
+        ],
+        "run_at": "document_idle",
+        "js": ["export_hust_timetable.js"]
+      },
+      {
+        "matches": [
+          "https://ctt-sis.hust.edu.vn/Students/StudentCourseMarks.aspx",
+          "http://ctt-sis.hust.edu.vn/Students/StudentCourseMarks.aspx"
+        ],
+        "run_at": "document_idle",
+        "js": ["cpa_calculation.js"]
+      }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "sourceMap": true,
+      "target": "ES6",
+      "forceConsistentCasingInFileNames": true,
+      "strict": true
+    },
+    "typeAcquisition": {"include": ["firefox-webext-browser"]},
+    "files": [
+      "facebook.ts",
+      "background.ts",
+      "export_hust_timetable.ts",
+      "cpa_calculation.ts"
+    ]
+}
